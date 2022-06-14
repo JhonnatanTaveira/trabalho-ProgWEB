@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <header class="cabecalhoPrincipal">
+		<div class="cabeca">
+			<h1 class="cabecalhoPrincipal-titulo">
+				<a href="#">Tarefas</a>
+			</h1>
+
+			<nav class="cabecalhoPrincipal-nav">
+				<a class="cabecalhoPrincipal-nav-link" href="index.html">Logar</a>
+				<a class="cabecalhoPrincipal-nav-link" href="cadastro.html">Cadastrar</a>
+			</nav>
+		</div>
+	</header>
+    <div style="background-color: #333333;">.</div>
+    <div class="body container flex justify-content-center align-items-center">
+        <div id="corpoLogin" class="card-principal borda-redonda-20 borda-sombra-leve flex">
+            <div class="col-md-6 col-12 ">
+                <div class="tituloCard mb-2">Login</div>
+                <div class="formEntrada">
+                    <div class="formEntradaUser">
+                        <label for="formEntradaUser-input">
+                            <span class="textLabel">Usuário</span>
+                        </label>
+                        <input for="formEntradaUser-input" type="text">
+                    </div>
+                    <div class="formEntradaPassword mb-2">
+                        <label for="formEntradaPassword-input">
+                            <span class="textLabel">Senha</span>
+                        </label>
+                        <input id="formEntradaPassword-input" type="password">
+                    </div>
+                    <button type="button" class="colorBtn btn btn-sm">Entrar
+                    </button>
+                </div>
+                <div class="rodapeLoginArea">
+                    <div>Ainda não é cadastrado? <a href="cadastro.html">Registre-se agora!</a></div>
+                    <div class="textEsqueciSenha" onclick="trocaDisplayCorpo()">
+                        Esqueci minha senha
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recuperar a senha -->
+        <div id="corpoEsqueciSenha" class="card-esqueciSenha borda-redonda-20 borda-sombra-leve">
+            <div class="tituloCard">Esqueci a minha senha</div>
+            <div class="formEsqueciSenha">
+                <div>
+                    <label for="usuarioEsqueciSenha">Informe o seu usuário:</label>
+                    <input type="text" id="usuarioEsqueciSenha">
+                </div>
+                <div><span style="font-weight:bold">Ou...</span></div>
+                <div>
+                    <label for="emailEsqueciSenha">Informe o seu e-mail:</label>
+                    <input type="text" id="emailEsqueciSenha">
+                </div>
+            </div>
+            <div class="esqueciSenhaButtons">
+                <button type="button" class="btn colorBtn">Recuperar senha</button>
+                <div class="btn btn-secondary" onclick="trocaDisplayCorpo()">Voltar para Login</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
